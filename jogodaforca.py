@@ -93,7 +93,7 @@ def jogo_da_forca():
         letras_usuario = []
 
         while not palavra_adivinhada(palavra_secreta, letras_usuario) and \
-              cuenta_tentativas_erradas(palavra_secreta, letras_usuario) < MAX_TENTATIVAS:
+              tentativas_erradas(palavra_secreta, letras_usuario) < MAX_TENTATIVAS:
 
               mostra_adivinhadas(palavra_secreta, letras_usuario)
 
@@ -109,7 +109,6 @@ def jogo_da_forca():
         else:
             print('¯\\_(ツ)_/¯ você perdeu.')
 
-        print('')
         cont = input('Entre C se deseja continuar jogando.')
 
         if not (cont == 'C' or cont =='c'):
